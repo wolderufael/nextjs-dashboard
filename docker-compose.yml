@@ -1,0 +1,8 @@
+services:
+  test:
+    build: .
+    container_name: test
+    image: test
+    command: "npm start"
+    ports:
+      - 3001:3000
