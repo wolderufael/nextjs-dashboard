@@ -26,7 +26,7 @@ jobs:
       - name: Run deploy
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'   
-            cd /var/www/test
+            cd /test
             git pull https://wolderufael:${{ secrets.GH_PAT }}@github.com/wolderufael/nextjs-dashboard.git master
             cd nextjs_dashboard
             docker compose down
